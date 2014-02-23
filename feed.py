@@ -16,10 +16,13 @@ data=json.load(urllib2.urlopen(url))
 print data[0][u'tripFrom']
 for i in range(len(data)):
 	res = es.index(index="streams", doc_type="flights", id=i, body=data[i])
+	res = es.get(index="streams", doc_type="flights", id=i)
+	#print(res['_source'])
+	#es.delete(index="streams", doc_type="flights", id=i)
 
 #print(res['ok'])
-res = es.get(index="streams", doc_type="flights", id=41)
-print(res['_source'])
+#res = es.get(index="streams", doc_type="flights", id=41)
+#print(res['_source'])
 # es.delete(index="streams", doc_type="flights", id=41)
 
 
