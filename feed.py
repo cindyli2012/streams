@@ -20,7 +20,7 @@ for i in range(len(data)):
 #print(res['ok'])
 res = es.get(index="streams", doc_type="flights", id=41)
 print(res['_source'])
-es.delete(index="streams", doc_type="flights", id=41)
+# es.delete(index="streams", doc_type="flights", id=41)
 
 
 url="http://api.wunderground.com/api/3c3fe3397f363646/conditions/q/NY/New_York.json"
