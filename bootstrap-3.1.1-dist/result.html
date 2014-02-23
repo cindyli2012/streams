@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!-- saved from url=(0040)http://getbootstrap.com/examples/cover/# -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="http://getbootstrap.com/assets/ico/favicon.ico">
+
+    <title>Cover Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="./css/result_page.css" rel="stylesheet">
+
+  <style type="text/css"></style><style id="holderjs-style" type="text/css"></style></head>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular.min.js"></script>
+   <script src="js/result.js"></script>
+  <body>   
+<div id="ng-app" ng-app ng-controller="PostsCtrlAjax">  
+		<div ng-repeat="post in posts" class='postBody'>
+			<div class="col-md-4 column productbox">
+    			<img src="http://placehold.it/460x250/e67e22/ffffff&text={{post.to}}" class="img-responsive">
+		    	<div class="city name">{{post.to}}</div>
+		    	<img src='{{post.weather_icon_url}}'>
+		    	<div class="temperature">{{post.temperature}}</div>
+		    	<div class="productprice"><div class="pull-right"><a href="#" class="btn btn-danger btn-sm" role="button">BUY</a></div><div class="pricetext">{{post.price}}</div></div>
+			</div>
+		</div>
+    
+</div>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/docs.min.js"></script>
+</body></html>
